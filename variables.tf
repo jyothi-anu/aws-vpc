@@ -1,11 +1,9 @@
 variable "project" {
     type = string
-    default = "roboshop"
   
 }
 variable "environment" {
     type = string
-    default = "dev"
   
 }
 variable "vpc_cidr_block" {
@@ -13,6 +11,10 @@ variable "vpc_cidr_block" {
     default = "10.0.0.0/16"
 }
 variable "vpc_tags" {
+    default = {}
+    type = map
+}
+variable "igw_tags" {
     default = {}
     type = map
   
