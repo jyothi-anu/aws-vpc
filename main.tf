@@ -22,6 +22,7 @@ resource "aws_subnet" "public" {
     {
         #roboshop-dev-public-us-east-1a
         Name ="${var.project}-${var.environment}-public-${local.az_names[count.index]}"
-    }
+    },
+    var.public_subnet_tags
   )
 }
