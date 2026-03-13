@@ -54,6 +54,7 @@ resource "aws_subnet" "private" {
         #roboshop-dev-database-us-east-1a
              Name ="${var.project}-${var.environment}-database-${local.az_names[count.index]}"
          },
+         var.database_subnet_tags
   )
  }
 
